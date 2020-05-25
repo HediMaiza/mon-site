@@ -1,0 +1,41 @@
+div::selection,h2::selection,h1::selection,h3::selection,h4::selection,p::selection{background-color:#343436;color:#fff}
+body{margin:0;color:#444;font-family:'Raleway', sans-serif;font-weight:300}
+img{max-width:100%;position: relative}
+img:before{background:#e5e5e5;border:1px solid #ccc;content: '\1F517' ' image de 'attr(alt);
+  display:block;left: 0;padding:10px;position:absolute;top:-10px;width:100%}
+a{color:#444}
+.blur-up{-webkit-filter:blur(20px);filter: blur(20px);transition:filter 500ms,-webkit-transition:filter 500ms}
+.blur-up.lazyloaded{-webkit-filter: blur(0);filter: blur(0)}
+
+.photo{background-color: rgba(243,243,243,0.9)}
+.photo img{max-height: 65vh;width:100%;height:100%;object-fit:cover}
+.description{padding:1rem;background-color: rgba(243,243,243,0.9)}
+h1{font-family:'Playfair Display', serif;font-weight:900}
+h1 strong{font-size:150%}
+h2{font-family:'Playfair Display', serif;font-size:1.9em}
+
+.links{margin:2rem 0;min-height:2rem}
+.link{margin:0 1rem 0.5rem 0;background-color:#fff;text-align:center;padding: 1rem;width:5rem;display: inline-block;
+	text-decoration: none;transition:box-shadow 300ms ease-in}
+.link:hover,.link:focus{box-shadow:0 0 27px #ddd}
+.clients-title{background-color:#e5e5e5;color:#444;font-size:2rem;text-align:center;padding-top:2rem;padding-bottom:2rem}
+
+.project{padding:1rem;color:#fff;text-align:center}
+.project:first-child{background-color:#fff;color:#444}
+.project:first-child .project-h4::before{background-color:#444}
+
+.project:nth-child(2n){background-color:#6b6b6b}
+.project:nth-child(3n),.project:nth-child(4n){background-color: #343436;color:#fff}
+.logo{max-width:70%;max-height:6.5rem}
+.project-h4{position:relative;padding-top:1rem}
+.project-h4::before{position:absolute;content:"";height:1px;top:0;width:80%;background-color:#fff;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+
+footer{padding:1rem 0;background-color:rgba(243,243,243,0.9);text-align:center}
+
+@media (min-width:767px){
+	.photo img{max-height:75vw;-webkit-transform:perspective(400px) rotateY(6deg);transform:perspective(400px) rotateY(6deg);transition:transform 600ms ease-in}
+	.photo img:hover{-webkit-transform:rotateY(3deg) scale(0.92);transform:rotateY(3deg) scale(0.92)}
+	.description{padding:3rem}h1 strong{font-size:3.5vw}h3{font-size:1.5rem}
+	.project{padding:2rem}.logo{min-height:6rem;max-width:25vw}
+	.clients-title{background:url("../img/bg.jpg") no-repeat;background-size:cover;background-position:22% center}
+}
